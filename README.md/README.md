@@ -8,13 +8,13 @@ The goal is to understand the composition of Netflix’s catalog, including cont
 NETFLIX_Project/
 │
 ├── data/
-│   └── netflix_titles.csv
+│   └── [netflix_titles.csv](data/netflix_titles.csv)
 │
 ├── sql/
-│   └── netflix_analysis.sql
+│   └── [netflix_analysis.sql](sql/netflix_analysis.sql)
 │
 ├── docs/
-│   └── netflix_case_study.md
+│   └── [netflix_case_study.md](notes/netflix_case_study.md)
 │
 └── README.md
 
@@ -126,7 +126,8 @@ Peak year of additions: 2019
 
 All SQL queries used in this project can be found in:
 
-📄 sql/netflix_analysis.sql
+📄 ### SQL Analysis
+[netflix_analysis.sql](sql/netflix_analysis.sql)
 
 This includes:
 
@@ -155,7 +156,7 @@ Cast
 
 See the detailed analysis, insights, and conclusion in:
 
-📄 docs/netflix_case_study.md
+📄 [netflix_case_study.md](notes/netflix_case_study.md)
 
 This file walks through:
 
