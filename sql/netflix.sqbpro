@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/home/ashley/netflix.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1314"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainnetflix"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">SELECT *
+FROM netflix
+LIMIT 10;</sql><sql name="SQL 2">SELECT count(*) AS total_titles
+FROM netflix;</sql><sql name="SQL 3">SELECT type, count(*)
+FROM netflix
+GROUP BY type;</sql><sql name="SQL 4">SELECT country, count(*) AS total_titles
+FROM netflix
+WHERE country IS NOT NULL
+GROUP BY country
+ORDER BY total_titles DESC
+LIMIT 10;</sql><sql name="SQL 6">SELECT listed_in, COUNT(*) AS count
+FROM netflix
+GROUP BY listed_in
+ORDER By count DESC
+LIMIT 10;</sql><sql name="SQL 7">SELECT
+	SUBSTR(date_added, -4) AS year_added,
+	COUNT(*) AS total_titles
+FROM netflix
+WHERE year_added IS NOT NULL
+GROUP BY year_added
+ORDER BY year_added;</sql><sql name="SQL 8">SELECT director, COUNT(*) AS total_titles
+FROM netflix
+WHERE director IS NOT NULL AND director &lt;&gt; ''
+GROUP BY director
+ORDER BY total_titles DESC
+LIMIT 10;</sql><sql name="SQL 9">SELECT &quot;cast&quot;, COUNT(*) AS total_titles
+FROM netflix
+WHERE &quot;cast&quot; IS NOT NULL AND &quot;cast&quot; &lt;&gt; ''
+GROUP BY &quot;cast&quot;
+ORDER BY total_titles DESC
+LIMIT 10;</sql><sql name="SQL 10">SELECT *
+FROM netflix
+WHERE listed_in LIKE '%Horror%';</sql><sql name="SQL 11">SELECT COUNT(*) AS horror_titles
+FROM netflix
+WHERE listed_in LIKE '%Horror%';</sql><sql name="SQL 14">SELECT COUNT(*) AS comedy_titles
+FROM netflix
+WHERE listed_in LIKE '%Comedy%';</sql><sql name="SQL 16">SELECT COUNT(*) AS kids_titles
+FROM netflix
+WHERE listed_in LIKE '%Kids%';</sql><sql name="SQL 12">SELECT
+	CAST(SUBSTR(date_added, -4) AS INT) AS year_added,
+	COUNT(*) AS total_titles
+FROM netflix
+WHERE date_added IS NOT NULL
+GROUP BY year_added
+ORDER BY year_added;</sql><sql name="SQL 13">SELECT *
+FROM netflix
+WHERE description LIKE '%love%';</sql><sql name="SQL 17">SELECT rating, COUNT(*)
+FROM netflix
+WHERE rating IS NOT NULL
+GROUP BY rating
+ORDER BY COUNT(*) DESC
+LIMIT 5;</sql><current_tab id="3"/></tab_sql></sqlb_project>
